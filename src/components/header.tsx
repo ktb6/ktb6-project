@@ -2,11 +2,11 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-transparent text-black p-4">
-      <div className="container mx-auto flex justify-between items-center text-white">
+    <header className="bg-transparent p-4">
+      <div className="container mx-auto flex justify-between items-centers">
         <h1 className="text-2xl font-bold">
           <Link href="/">
-            <span>Team Blog</span>
+            <span>육두문자</span>
           </Link>
         </h1>
         <nav>
