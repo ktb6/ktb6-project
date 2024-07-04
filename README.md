@@ -1,1 +1,1 @@
-# ktb6-project
+# KTB6 팀 블로그
