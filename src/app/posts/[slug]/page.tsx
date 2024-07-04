@@ -33,8 +33,8 @@ export default function Post({ params }: PostProps) {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
-      <p className="text-gray-600 mb-8">{data.date}</p>
-      <p className="text-gray-800 mb-8">{data.description}</p>
+      <p className="mb-8">{data.date}</p>
+      <p className="mb-8">{data.description}</p>
       <div className="prose">
         <ReactMarkdown
           components={{
