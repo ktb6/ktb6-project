@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Post {
   slug: string;
   title: string;
   date: string;
   description: string;
+  image: string;
 }
 
 export default function Home() {
@@ -19,18 +21,34 @@ export default function Home() {
         <h1 className="text-4xl mb-4">Latest Posts</h1>
         <ul>
           {posts.map((post) => (
-            <div key={post.slug} className="container mb-r p-4 hover:bg-gradient-to-r from-gray-200 to-gray-300">
-            <li
+            <div
               key={post.slug}
+              className="container mb-r p-4 hover:bg-gradient-to-r from-gray-100 to-gray-200 hover:dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-800"
             >
-              <Link href={`/posts/${post.slug}`}>
-                <span className="text-blue-500 text-2xl mb-2 block">
-                  {post.title}
-                </span>
-              </Link>
-              <p className="text-gray-600 mb-2">{post.date}</p>
-              <p>{post.description}</p>
-            </li>
+              <li key={post.slug} className="flex flex-row items-start">
+              <div className="flex-grow flex flex-col">
+                <Link href={`/posts/${post.slug}`}>
+                  <span className="text-blue-500 text-2xl mb-2 block">
+                    {post.title}
+                  </span>
+                </Link>
+                <p className="text-gray-600 mb-2">{post.date}</p>
+                <p>{post.description}</p>
+                </div>
+                  {post.image && (
+                    <div className="h-150 w-150 overflow-hidden">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        width={150} // Adjust width as needed
+                        height={150} // Adjust height as needed
+                        className="object-cover rounded"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                  )}
+                
+              </li>
             </div>
           ))}
         </ul>
@@ -53,6 +71,7 @@ const getPosts = () => {
       title: data.title,
       date: data.date,
       description: data.description,
+      image: data.image
     };
   });
 
