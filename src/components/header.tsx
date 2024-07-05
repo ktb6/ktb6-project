@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Header = () => {
   return (
@@ -11,6 +12,7 @@ const Header = () => {
         </h1>
         <nav>
           <ul className="flex space-x-4">
+          <div><ThemeSwitch/></div>
             <li>
               <Link href="/">
                 <span>Home</span>
