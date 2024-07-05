@@ -1,0 +1,42 @@
+{
+  "team": {
+    "name": "육두문자",
+    "members": [
+      {
+        "role": "풀스택",
+        "name": "신유승",
+        "nickname": "youth.shin",
+        "skills": ["Java"],
+        "bio": "안녕하세요, youth입니다."
+      },
+      {
+        "role": "클라우드",
+        "name": "서창호",
+        "nickname": "chang.seo",
+        "skills": ["Docker", "Kubernetes", "Terraform"],
+        "bio": "안녕하세요, chang입니다."
+      },
+      {
+        "role": "클라우드",
+        "name": "변미담",
+        "nickname": "ari.byun",
+        "skills": ["AWS", "Azure", "GCP"],
+        "bio": "안녕하세요, ari입니다."
+      },
+      {
+        "role": "인공지능",
+        "name": "조대현",
+        "nickname": "danny.jo",
+        "skills": ["Javascript", "React", "Python", "PyTorch"],
+        "bio": "안녕하세요, danny입니다."
+      },
+      {
+        "role": "인공지능",
+        "name": "이정민",
+        "nickname": "kevin.lee",
+        "skills": ["R", "Machine Learning", "NLP"],
+        "bio": "안녕하세요, kevin입니다."
+      }
+    ]
+  }
+}
