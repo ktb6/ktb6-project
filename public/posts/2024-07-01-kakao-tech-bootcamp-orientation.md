@@ -2,6 +2,7 @@
 title: "카카오테크 부트캠프 오리엔테이션 후기"
 date: "2024-07-01"
 description: "카카오테크 부트캠프 오리엔테이션에서의 경험과 인사이트를 공유합니다."
+image: "/images/kakao.png"
 ---
 
 ![카카오테크 부트캠프](/images/kakao.png)
