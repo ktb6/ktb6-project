@@ -1,15 +1,16 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import ReactMarkdown from "react-markdown";
-import Image from "next/image";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
+import { ImgHTMLAttributes } from 'react';
 
 export async function generateStaticParams() {
-  const postsDirectory = path.join(process.cwd(), "public/posts");
+  const postsDirectory = path.join(process.cwd(), 'public/posts');
   const filenames = fs.readdirSync(postsDirectory);
 
   return filenames.map((filename) => ({
-    slug: filename.replace(".md", ""),
+    slug: filename.replace('.md', ''),
   }));
 }
 
@@ -20,8 +21,8 @@ interface PostProps {
 }
 
 const getPost = (slug: string) => {
-  const postPath = path.join(process.cwd(), "public/posts", `${slug}.md`);
-  const fileContents = fs.readFileSync(postPath, "utf8");
+  const postPath = path.join(process.cwd(), 'public/posts', `${slug}.md`);
+  const fileContents = fs.readFileSync(postPath, 'utf8');
   const { data, content } = matter(fileContents);
 
   return { data, content };
