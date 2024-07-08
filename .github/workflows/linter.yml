@@ -1,6 +1,10 @@
-name: Lint
+name: Lint Front Code
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   lint:
