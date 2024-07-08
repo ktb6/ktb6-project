@@ -1,8 +1,8 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import Link from "next/link";
-import Image from "next/image";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const posts = getPosts();
@@ -18,28 +18,27 @@ export default function Home() {
               className="container mb-r p-4 hover:bg-gradient-to-r from-gray-100 to-gray-200 hover:dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-800"
             >
               <li key={post.slug} className="flex flex-row items-start">
-              <div className="flex-grow flex flex-col">
-                <Link href={`/posts/${post.slug}`}>
-                  <span className="text-blue-500 text-2xl mb-2 block">
-                    {post.title}
-                  </span>
-                </Link>
-                <p className="text-gray-600 mb-2">{post.date}</p>
-                <p>{post.description}</p>
+                <div className="flex-grow flex flex-col">
+                  <Link href={`/posts/${post.slug}`}>
+                    <span className="text-blue-500 text-2xl mb-2 block">
+                      {post.title}
+                    </span>
+                  </Link>
+                  <p className="text-gray-600 mb-2">{post.date}</p>
+                  <p>{post.description}</p>
                 </div>
-                  {post.image && (
-                    <div className="h-150 w-150 overflow-hidden">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        width={150} // Adjust width as needed
-                        height={150} // Adjust height as needed
-                        className="object-cover rounded"
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                  )}
-                
+                {post.image && (
+                  <div className="h-150 w-150 overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      width={150} // Adjust width as needed
+                      height={150} // Adjust height as needed
+                      className="object-cover rounded"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                )}
               </li>
             </div>
           ))}
@@ -63,7 +62,7 @@ const getPosts = () => {
       title: data.title,
       date: data.date,
       description: data.description,
-      image: data.image
+      image: data.image,
     };
   });
 
