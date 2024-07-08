@@ -1,5 +1,5 @@
-import profileData from "@/assets/data/profile.json";
-import { TitleWrapper } from "@/components/TitleWrapper";
+import profileData from '@/assets/data/profile.json';
+import { TitleWrapper } from '@/components/TitleWrapper';
 
 const About = () => {
   const profile = profileData;
@@ -24,8 +24,8 @@ const About = () => {
                 {member.nickname})
               </p>
               <p className="text-gray-300 mb-1">
-                <span className="font-bold">주요 기술:</span>{" "}
-                {member.skills.join(", ")}
+                <span className="font-bold">주요 기술:</span>{' '}
+                {member.skills.join(', ')}
               </p>
               <p className="text-gray-300">
                 <span className="font-bold">소개:</span> {member.bio}

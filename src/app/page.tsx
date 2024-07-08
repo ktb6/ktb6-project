@@ -1,14 +1,7 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import Link from "next/link";
-
-interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  description: string;
-}
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Link from 'next/link';
 
 export default function Home() {
   const posts = getPosts();
@@ -34,16 +27,16 @@ export default function Home() {
 }
 
 const getPosts = () => {
-  const postsDirectory = path.join(process.cwd(), "public/posts");
+  const postsDirectory = path.join(process.cwd(), 'public/posts');
   const filenames = fs.readdirSync(postsDirectory);
 
   const posts = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(filePath, "utf8");
+    const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(fileContents);
 
     return {
-      slug: filename.replace(".md", ""),
+      slug: filename.replace('.md', ''),
       title: data.title,
       date: data.date,
       description: data.description,
