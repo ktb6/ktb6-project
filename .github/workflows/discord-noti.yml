@@ -18,6 +18,12 @@ jobs:
       - name: Install jq
         run: sudo apt-get install jq
 
+      - name: Set environment variable for ready for review
+        if: ${{ !github.event.pull_request.draft }}
+        run: |
+          echo "READY_FOR_REVIEW=true" >> $GITHUB_ENV
+          echo "REQUESTED_REVIEWERS_COUNT=$(echo '${{ toJson(github.event.pull_request.requested_reviewers) }}' | jq 'length')" >> $GITHUB_ENV
+
       - name: Notify on PR opened
         if: github.event.action == 'opened'
         run: |
@@ -25,12 +31,6 @@ jobs:
           -H 'Content-type: application/json' \
           -d "{\"content\":\"Pull Request가 열렸습니다! PR(#${{ github.event.pull_request.number }}): [${{ github.event.pull_request.title }}](${{ github.event.pull_request.html_url }})\"}" \
           ${{ secrets.DISCORD_WEBHOOK_URL }}
-
-      - name: Set environment variable for ready for review
-        if: github.event.action == 'ready_for_review'
-        run: |
-          echo "READY_FOR_REVIEW=true" >> $GITHUB_ENV
-          echo "REQUESTED_REVIEWERS_COUNT=$(echo '${{ toJson(github.event.pull_request.requested_reviewers) }}' | jq 'length')" >> $GITHUB_ENV
 
       - name: Notify on PR ready for review with review requested
         if: github.event.action == 'ready_for_review' && env.REQUESTED_REVIEWERS_COUNT > 0
