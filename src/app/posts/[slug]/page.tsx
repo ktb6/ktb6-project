@@ -31,28 +31,6 @@ export default function Post({ params }: PostProps) {
   const { data, content } = getPost(params.slug);
 
   return (
-<<<<<<< HEAD
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
-      <p className="mb-8">{data.date}</p>
-      <p className="mb-8">{data.description}</p>
-      <div className="prose">
-        <ReactMarkdown
-          components={{
-            img: ({ node, ...props }) => (
-              <Image
-                alt={props.alt || ""}
-                src={props.src || ""}
-                layout="responsive"
-                width={700}
-                height={475}
-              />
-            ),
-          }}
-        >
-          {content}
-        </ReactMarkdown>
-=======
     <div className="flex justify-center items-center min-h-screen">
       <div className="container max-w-2xl mx-auto p-4">
           <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
@@ -80,7 +58,6 @@ export default function Post({ params }: PostProps) {
               {content}
             </ReactMarkdown>
           </div>
->>>>>>> e42aecb (feat: 블로그 게시물 가운데 정렬)
       </div>
     </div>
   );

@@ -6,10 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-<<<<<<< HEAD
   darkMode: "class",
-=======
->>>>>>> b028cd2 (refactor(front-web): front-web 폴더 제거, README 파일 제목 수정)
   theme: {
     extend: {
       backgroundImage: {
@@ -17,7 +14,6 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-<<<<<<< HEAD
       typography: (theme: any) => ({
         DEFAULT: {
           css: {
@@ -64,10 +60,5 @@ const config: Config = {
     },
   },
   plugins: [require("@tailwindcss/typography")],
-=======
-    },
-  },
-  plugins: [],
->>>>>>> b028cd2 (refactor(front-web): front-web 폴더 제거, README 파일 제목 수정)
 };
 export default config;
