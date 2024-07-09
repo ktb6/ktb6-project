@@ -26,8 +26,14 @@ jobs:
           -d "{\"content\":\"Pull Request가 열렸습니다! PR(#${{ github.event.pull_request.number }}): [${{ github.event.pull_request.title }}](${{ github.event.pull_request.html_url }})\"}" \
           ${{ secrets.DISCORD_WEBHOOK_URL }}
 
+      - name: Set environment variable for ready for review
+        if: github.event.action == 'ready_for_review'
+        run: |
+          echo "READY_FOR_REVIEW=true" >> $GITHUB_ENV
+          echo "REQUESTED_REVIEWERS_COUNT=$(echo '${{ toJson(github.event.pull_request.requested_reviewers) }}' | jq 'length')" >> $GITHUB_ENV
+
       - name: Notify on PR ready for review with review requested
-        if: github.event.action == 'ready_for_review' && github.event.pull_request.requested_reviewers != null
+        if: github.event.action == 'ready_for_review' && env.REQUESTED_REVIEWERS_COUNT > 0
         run: |
           ASSIGNEE=$(jq -r --arg assignee "${{ github.event.pull_request.assignee.login }}" '.[$assignee]' user-mapping.json)
           REQUESTED_REVIEWERS=$(echo '${{ toJson(github.event.pull_request.requested_reviewers) }}' | jq -r --argfile mapping user-mapping.json 'map(.login as $login | "<@"+($mapping[$login])+">") | join(", ")')
@@ -35,10 +41,6 @@ jobs:
           -H 'Content-type: application/json' \
           -d "{\"content\":\"PR(#${{ github.event.pull_request.number }}): [${{ github.event.pull_request.title }}](${{ github.event.pull_request.html_url }}) \n담당자 <@$ASSIGNEE>님이 $REQUESTED_REVIEWERS님(들)에게 리뷰를 요청했습니다!\"}" \
           ${{ secrets.DISCORD_WEBHOOK_URL }}
-
-      - name: Set environment variable for ready for review
-        if: github.event.action == 'ready_for_review'
-        run: echo "READY_FOR_REVIEW=true" >> $GITHUB_ENV
 
       - name: Notify on PR review requested
         if: github.event.action == 'review_requested' && env.READY_FOR_REVIEW != 'false'
