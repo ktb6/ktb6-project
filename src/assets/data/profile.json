@@ -34,8 +34,8 @@
         "role": "인공지능",
         "name": "이정민",
         "nickname": "kevin.lee",
-        "skills": ["R", "Machine Learning", "NLP"],
-        "bio": "안녕하세요, kevin입니다."
+        "skills": ["Python", "Machine Learning", "NLP"],
+        "bio": "네, kevin입니다. 잘 부탁드립니다."
       }
     ]
   }
