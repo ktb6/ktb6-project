@@ -47,8 +47,14 @@ jobs:
   Review:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Install jq
         run: sudo apt-get install jq
+
+      - name: List files for debugging
+        run: ls -al
 
       - name: Notify on PR review submitted
         if: github.event.action == 'submitted'
