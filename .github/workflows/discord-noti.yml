@@ -24,14 +24,6 @@ jobs:
           echo "READY_FOR_REVIEW=true" >> $GITHUB_ENV
           echo "REQUESTED_REVIEWERS_COUNT=$(echo '${{ toJson(github.event.pull_request.requested_reviewers) }}' | jq 'length')" >> $GITHUB_ENV
 
-      - name: Notify on PR opened
-        if: github.event.action == 'opened'
-        run: |
-          curl -X POST \
-          -H 'Content-type: application/json' \
-          -d "{\"content\":\"Pull Request가 열렸습니다! PR(#${{ github.event.pull_request.number }}): [${{ github.event.pull_request.title }}](${{ github.event.pull_request.html_url }})\"}" \
-          ${{ secrets.DISCORD_WEBHOOK_URL }}
-
       - name: Notify on PR ready for review with review requested
         if: github.event.action == 'ready_for_review' && env.REQUESTED_REVIEWERS_COUNT > 0
         run: |
