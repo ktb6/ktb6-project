@@ -8,7 +8,7 @@ image: "/images/youth.png"
 
 # 풀스택 개발자 Youth입니다!
 
-![Youth.shin](../images/youth.png)
+![Youth.shin](/images/youth.png)
 
 안녕하세요! 육두문자팀의 풀스택 개발자 Youth에요.
 
@@ -32,7 +32,7 @@ JavaScript와 관련된 내용은 크게 다룬적이 없어 조금은 걱정이
 
 저는 **사진** 찍는걸 굉장히 좋아해서 여행이나 길가다 가끔 카메라를 들기도 합니다. 팀끼리 외부 활동을 하게 된다면 이쁘게 찍어볼게요!
 
-![Youth Photo](../images/youth1.jpeg)
+![Youth Photo](/images/youth1.jpeg)
 
 ### 최애 노래
 
