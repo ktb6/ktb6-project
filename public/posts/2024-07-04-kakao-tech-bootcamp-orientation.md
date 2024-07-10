@@ -1,11 +1,10 @@
 ---
-title: '카카오테크 부트캠프 오리엔테이션 후기'
+title: '카카오테크 부트캠프 오리엔테이션 후기 제목이 더 길면 어떤 문제가 발생할까?'
 category: 'Blog'
-date: '2024-07-01'
+date: '2024-07-04'
 author: 'danny.jo'
 description: '카카오테크 부트캠프 오리엔테이션에서의 경험과 인사이트를 공유합니다.'
 image: '/images/kakao.png'
-tags: ['kakao', 'bootcamp', 'orientation', 'pangyo', 'goorm', 'Uspace']
 ---
 
 ![카카오테크 부트캠프](/images/kakao.png)

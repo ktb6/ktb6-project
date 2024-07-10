@@ -1,0 +1,41 @@
+{
+  "service_name": "육두문자",
+  "service_description": "우리 팀은 지속적으로 새로운 기술과 지식을 습득하고, 이를 팀원들과 공유함으로써 함께 성장하는 것을 목표로 합니다.",
+  "service_tags": [
+    "블로깅",
+    "트러블 슈팅",
+    "특강 후기",
+    "팀 성장",
+    "기술 공유"
+  ],
+  "version": "1.0.0",
+  "author": "육두문자 Team",
+  "contact_email": "dannyjo.world@gmail.com",
+  "repository_url": "https://github.com/ktb6/ktb6-teamblog",
+  "license": "MIT",
+  "last_updated": "2024-07-10",
+  "seo": {
+    "title": "육두문자 - 팀 블로그 및 기술 공유 플랫폼",
+    "meta_description": "우리 팀은 지속적으로 새로운 기술과 지식을 습득하고, 이를 팀원들과 공유함으로써 함께 성장하는 것을 목표로 합니다. 블로깅, 트러블 슈팅, 특강 후기를 작성하세요.",
+    "keywords": [
+      "육두문자",
+      "팀 블로그",
+      "기술 공유",
+      "트러블 슈팅",
+      "특강 후기"
+    ],
+    "canonical_url": "http://localhost:3000",
+    "robots": "index, follow",
+    "image": "/images/default_image.png"
+  },
+  "social_media": {
+    "open_graph": {
+      "title": "육두문자 - 팀 블로그 및 기술 공유 플랫폼",
+      "type": "website",
+      "url": "http://localhost:3000",
+      "image": "/images/default_image.png",
+      "description": "우리 팀은 지속적으로 새로운 기술과 지식을 습득하고, 이를 팀원들과 공유함으로써 함께 성장하는 것을 목표로 합니다. 블로깅, 트러블 슈팅, 특강 후기를 작성하세요.",
+      "site_name": "육두문자"
+    }
+  }
+}

@@ -3,6 +3,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
+import { formatDate } from '@/utils/date';
+import Link from 'next/link';
 
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), 'public/posts');
@@ -31,16 +33,34 @@ export default function Post({ params }: PostProps) {
   const { data, content } = getPost(params.slug);
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen mt-8 mb-24">
       <div className="container max-w-2xl mx-auto p-4">
-        <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
-        {/* <p className="text-gray-600 mb-8">{data.date}</p> */}
-        <div className="text-gray-600 mb-8 flex justify-between">
-          <span>{data.date}</span>
-          <span>{data.author}</span>
+        <div className="flex flex-col items-center pb-10">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+            {data.title}
+          </h1>
+          <div className="text-gray-400 flex w-fit items-center">
+            <Link href={`/author/${data.author}`}>
+              <span>{data.author}</span>
+            </Link>
+            <div className="dot" />
+            <span>{formatDate(data.date)}</span>
+            {data.tags && data.tags.length > 0 && (
+              <>
+                <div className="dot" />
+                <div className="flex gap-2">
+                  {data.tags.map((tag: any, index: number) => (
+                    <span key={index} className="text-slate-300">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
-        <p className="text-gray-800 mb-8">{data.description}</p>
-        <div className="prose">
+
+        <div className="prose-sm md:prose">
           <ReactMarkdown
             components={{
               img: ({ alt, src }) => (
