@@ -15,17 +15,21 @@ export const getPosts = () => {
     return {
       slug: filename.replace('.md', ''),
       title: data.title,
-      category: data.category,
-      author: data.author,
       date: data.date,
+      author: data.author,
       description: data.description,
+      category: data.category,
       image: data.image,
+      hide: data.hide,
     };
   });
 
-  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const visiblePosts = posts.filter((post) => !post.hide);
+  visiblePosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 
-  return posts;
+  return visiblePosts;
 };
 
 export function getPostsByAuthor(author: string) {
@@ -38,17 +42,22 @@ export function getPostsByAuthor(author: string) {
     return {
       slug: fileName.replace(/\.md$/, ''),
       title: data.title,
-      category: data.category,
-      author: data.author,
       date: data.date,
+      author: data.author,
       description: data.description,
+      category: data.category,
       image: data.image,
+      hide: data.hide,
     };
   });
 
-  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-  return posts.filter(
-    (post) => post.author.toLowerCase() === author.toLowerCase(),
+  // hide가 true인 포스트를 제외하고 정렬 및 필터링
+  const visiblePosts = posts.filter(
+    (post) => !post.hide && post.author.toLowerCase() === author.toLowerCase(),
   );
+  visiblePosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+
+  return visiblePosts;
 }
