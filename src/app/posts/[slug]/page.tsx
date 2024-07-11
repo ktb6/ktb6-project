@@ -64,7 +64,7 @@ export default function Post({ params }: PostProps) {
           </div>
         </div>
 
-        <div className="prose-sm md:prose pb-12">
+        <div className="prose-sm md:prose pb-24">
           <ReactMarkdown
             components={{
               img: ({ alt, src }) => (
