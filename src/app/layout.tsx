@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import Providers from '@/components/Providers';
 import MetaData from '@/assets/data/metadata.json';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 const metaData = MetaData;
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <div>{children}</div>
+          <Footer />
         </Providers>
       </body>
     </html>

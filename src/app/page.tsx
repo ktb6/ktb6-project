@@ -7,7 +7,7 @@ export default function Home() {
   const cards = transformPostsToCards(posts);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-5 max-w-screen-xl mx-auto w-full mt-8 mb-24">
+    <main className="flex min-h-screen flex-col items-center justify-between px-5 max-w-screen-xl mx-auto w-full mt-8">
       <CardList cards={cards} defaultView="list" hideViewSelect />
     </main>
   );
