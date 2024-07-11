@@ -1,43 +1,49 @@
-import profileData from '@/assets/data/profile.json';
+import ProfileData from '@/assets/data/profile.json';
 import { TitleWrapper } from '@/components/TitleWrapper';
+import Link from 'next/link';
 
 const About = () => {
-  const profile = profileData;
+  const profileData = ProfileData;
 
   return (
-    <div className="container mx-auto p-4 flex flex-col gap-8 max-w-[1200px]">
-      <TitleWrapper title=" 안녕하세요, 우리는 카카오테크 부트캠프 1기 6조 육두문자입니다!">
-        <span className="text-2xl">
+    <main className="container mx-auto p-4 flex flex-col gap-8 max-w-[1200px] mt-8 mb-24">
+      <div className="flex flex-col items-center">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center">
+          안녕하세요, 우리는 카카오테크 부트캠프 1기 6조 육두문자입니다!
+        </h1>
+
+        <span className="text-md sm:text-lg lg:text-xl text-gray-400">
           우리 팀은 지속적으로 새로운 기술과 지식을 습득하고, 이를 팀원들과
           공유함으로써 함께 성장하는 것을 목표로 합니다.
         </span>
-      </TitleWrapper>
+      </div>
       <TitleWrapper title="팀원 소개">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {profile.team.members.map((member, index) => (
-            <div key={index} className="bg-gray-800 shadow-lg rounded-lg p-6">
-              <h2 className="text-2xl font-semibold mb-2">
-                {member.role} 개발자
-              </h2>
-              <p className="text-gray-300 mb-1">
-                <span className="font-bold">이름:</span> {member.name} (
-                {member.nickname})
-              </p>
-              <p className="text-gray-300 mb-1">
-                <span className="font-bold">주요 기술:</span>{' '}
-                {member.skills.join(', ')}
-              </p>
-              <p className="text-gray-300">
-                <span className="font-bold">소개:</span> {member.bio}
-              </p>
-            </div>
+          {profileData.team.members.map((member, index) => (
+            <Link href={`/author/${member.nickname}`} key={index}>
+              <div className="bg-gray-800 shadow-lg rounded-lg p-6 hover-3d">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-2">
+                  {member.role} 개발자
+                </h2>
+                <p className="text-gray-300 mb-1">
+                  <span className="font-bold">이름:</span> {member.nickname}
+                </p>
+                <p className="text-gray-300 mb-1">
+                  <span className="font-bold">주요 기술:</span>{' '}
+                  {member.skills.join(', ')}
+                </p>
+                <p className="text-gray-300">
+                  <span className="font-bold">소개:</span> {member.bio}
+                </p>
+              </div>
+            </Link>
           ))}
         </section>
       </TitleWrapper>
       <TitleWrapper title="우리가 하는 일">
         <section className="bg-gray-800 shadow-lg rounded-lg p-6 flex flex-col gap-2 max-w-[740px]">
           <div>
-            <h3 className="text-2xl font-semibold mb-2">프로젝트</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">프로젝트</h3>
             <p className="text-gray-300 mb-4">
               우리는 현재 AI 솔루션을 클라우드에 탑재한 기발하고 창의적인
               서비스를 제작하는 것을 목표로 하고 있습니다. 이 프로젝트는 사용자
@@ -46,7 +52,9 @@ const About = () => {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold mb-2">기술 사용 사례</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+              기술 사용 사례
+            </h3>
             <ul className="list-disc list-inside text-gray-300 mb-4">
               <li>
                 프론트엔드: React와 Next.js를 사용하여 사용자 친화적인
@@ -71,7 +79,9 @@ const About = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold mb-2">문제 해결 방법</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+              문제 해결 방법
+            </h3>
             <ul className="list-disc list-inside text-gray-300">
               <li>
                 문제 정의: 문제의 본질을 정확히 파악하고 명확하게 정의합니다.
@@ -99,14 +109,18 @@ const About = () => {
       <TitleWrapper title="일하는 방식">
         <section className="bg-gray-800 shadow-lg rounded-lg p-6 flex flex-col gap-2 max-w-[740px]">
           <div>
-            <h3 className="text-2xl font-semibold mb-2">협업 도구</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+              협업 도구
+            </h3>
             <p className="text-gray-300 mb-4">
               우리 팀은 GitHub, Jira, Discord를 사용하여 효율적인 협업 환경을
               구축하고 있습니다.
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold mb-2">작업 프로세스</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+              작업 프로세스
+            </h3>
             <p className="text-gray-300 mb-4">
               우리는 애자일 스크럼 방식을 채택하여 작업을 진행합니다. 데일리
               스크럼을 통해 진행 상황을 공유하고, 스프린트 단위로 목표를
@@ -114,7 +128,9 @@ const About = () => {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold mb-2">커뮤니케이션</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+              커뮤니케이션
+            </h3>
             <p className="text-gray-300 mb-4">
               팀 내외부와의 원활한 소통을 위해 Discord와 Zep을 사용하고
               있습니다. 이를 통해 실시간 커뮤니케이션과 협업을 효과적으로
@@ -123,7 +139,7 @@ const About = () => {
           </div>
         </section>
       </TitleWrapper>
-    </div>
+    </main>
   );
 };
 

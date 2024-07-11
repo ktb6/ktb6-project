@@ -1,0 +1,12 @@
+{
+  "menu": [
+    {
+      "name": "Blog",
+      "link": "/posts"
+    },
+    {
+      "name": "About",
+      "link": "/about"
+    }
+  ]
+}

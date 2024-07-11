@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .hover-3d {
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: center;
+  }
+
+  .hover-3d:hover {
+    transform: perspective(1000px) rotateY(15deg) scale(1.02);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .dot {
+    background-color: #9ca3af;
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+    margin: 8px 10px;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,10 +48,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
