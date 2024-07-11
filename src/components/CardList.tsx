@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import PostCard from './Card';
+import Button from './Button';
 
 interface CardListProps {
   cards: Card[];
@@ -24,39 +25,33 @@ const CardList: React.FC<CardListProps> = ({
   return (
     <div className="w-full max-w-screen-xl mx-auto">
       {!hideViewSelect && (
-        <div className="flex justify-end mb-4">
-          <button
-            type="button"
-            className={`px-4 py-2 mr-2 rounded-md transition-colors duration-300 flex items-center ${
-              view === 'grid'
-                ? 'bg-blue-700 text-white hover:bg-blue-600'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-            }`}
-            onClick={() => handleViewChange('grid')}
+        <div className="flex justify-end mb-4 gap-2">
+          <Button
+            selected={view === 'grid'}
+            handleClick={() => handleViewChange('grid')}
           >
-            <img
-              src="/images/icon_grid.svg"
-              alt="Grid View"
-              className="w-5 h-5 mr-2"
-            />
-            Grid
-          </button>
-          <button
-            type="button"
-            className={`px-4 py-2 rounded-md transition-colors duration-300 flex items-center ${
-              view === 'list'
-                ? 'bg-blue-700 text-white hover:bg-blue-600'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-            }`}
-            onClick={() => handleViewChange('list')}
+            <>
+              <img
+                src="/images/icon_grid.svg"
+                alt="Grid View"
+                className="w-5 h-5 mr-2"
+              />
+              Grid
+            </>
+          </Button>
+          <Button
+            selected={view === 'list'}
+            handleClick={() => handleViewChange('list')}
           >
-            <img
-              src="/images/icon_list.svg"
-              alt="List View"
-              className="w-5 h-5 mr-2"
-            />
-            List
-          </button>
+            <>
+              <img
+                src="/images/icon_list.svg"
+                alt="Grid View"
+                className="w-5 h-5 mr-2"
+              />
+              List
+            </>
+          </Button>
         </div>
       )}
       <ul

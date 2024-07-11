@@ -9,7 +9,9 @@ const PageIntro = ({ title, description }: Props) => {
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
         {title}
       </h1>
-      <p className="text-lg text-gray-400">{description}</p>
+      <p className="text-md sm:text-lg lg:text-xl text-gray-400 max-w-[920px]">
+        {description}
+      </p>
     </div>
   );
 };
