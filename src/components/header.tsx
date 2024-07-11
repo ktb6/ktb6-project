@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import MetaData from '@/assets/data/metadata.json';
 import MenuData from '@/assets/data/menu.json';
+import Button from './Button';
 
 const Header = () => {
   const metaData = MetaData;
@@ -15,15 +16,28 @@ const Header = () => {
           </Link>
         </h1>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="flex items-center">
             {/* <ThemeSwitch /> */}
             {menuData.menu.map((item, index) => (
               <li key={index}>
                 <Link href={item.link}>
-                  <span>{item.name}</span>
+                  <Button style="none">{item.name}</Button>
                 </Link>
               </li>
             ))}
+            <a
+              href="https://github.com/ktb6/ktb6-teamblog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button style="none">
+                <img
+                  src="/images/github-mark-white.svg"
+                  alt="Github Icon"
+                  className="w-6 h-6"
+                />
+              </Button>
+            </a>
           </ul>
         </nav>
       </div>
