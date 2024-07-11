@@ -37,7 +37,7 @@ export default function Post({ params }: PostProps) {
   return (
     <main className="flex justify-center min-h-screen mt-8 mb-24">
       <div className="flex flex-col items-center w-full max-w-[820px] mx-auto p-6">
-        <div className="flex flex-col items-center pb-12">
+        <div className="flex flex-col items-center pb-4">
           <span className="text-[14px] text-blue-400 my-2">
             {data.category}
           </span>
@@ -63,7 +63,7 @@ export default function Post({ params }: PostProps) {
         </div>
 
         <div className="flex flex-col max-w-[780px] items-center justify-center gap-6 md:gap-14 pb-24">
-          <div className="max-w-[780px] prose md:prose-lg">
+          <div className="max-w-[780px] prose md:prose-lg text-[#F0F0F0]">
             <ReactMarkdown
               components={{
                 img: ({ alt, src }) => (

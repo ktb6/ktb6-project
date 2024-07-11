@@ -17,40 +17,20 @@ const config: Config = {
       typography: (theme: any) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.white'),
-            pre: {
-              maxWidth: '100%',
-            },
             h1: {
-              color: theme('colors.white'),
+              color: '#F0F0F0', // 제목 색상
             },
             h2: {
-              color: theme('colors.white'),
+              color: '#F0F0F0', // 제목 색상
             },
             h3: {
-              color: theme('colors.white'),
+              color: '#F0F0F0', // 제목 색상
             },
             h4: {
-              color: theme('colors.white'),
+              color: '#F0F0F0', // 제목 색상
             },
             h5: {
-              color: theme('colors.white'),
-            },
-            h6: {
-              color: theme('colors.white'),
-            },
-            strong: {
-              color: theme('colors.white'),
-            },
-            code: {
-              color: theme('colors.white'),
-              maxWidth: '100%',
-            },
-            figcaption: {
-              color: theme('colors.white'),
-            },
-            blockquote: {
-              color: theme('colors.white'),
+              color: '#F0F0F0', // 제목 색상
             },
             a: {
               color: theme('colors.blue.500'),
