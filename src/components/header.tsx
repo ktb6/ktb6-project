@@ -26,7 +26,7 @@ const Header = () => {
               </li>
             ))}
             <a
-              href="https://github.com/ktb6/ktb6-teamblog"
+              href="https://github.com/ktb6"
               target="_blank"
               rel="noopener noreferrer"
             >
