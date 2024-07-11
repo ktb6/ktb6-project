@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ card, view }) => {
   return (
     <Link href={`/posts/${card.slug}`} key={card.slug}>
       <li
-        className={`flex ${isListView ? 'flex-row max-w-[780px] mx-auto' : 'flex-col'} rounded-lg items-start p-4 hover:bg-gradient-to-r from-slate-800 to-slate-700 w-full h-full`}
+        className={`flex ${isListView ? 'flex-row max-w-[780px] mx-auto' : 'flex-col'} rounded-lg items-start p-4 hover:bg-gradient-to-r from-slate-900 to-slate-800 w-full h-full`}
       >
         <div
           className={`relative ${isListView ? 'w-1/3 h-auto order-last' : 'w-full order-first'}`}

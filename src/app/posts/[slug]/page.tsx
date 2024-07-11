@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import { formatDate } from '@/utils/date';
 import Link from 'next/link';
+import Button from '@/components/Button';
 
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), 'public/posts');
@@ -33,9 +34,12 @@ export default function Post({ params }: PostProps) {
   const { data, content } = getPost(params.slug);
 
   return (
-    <div className="flex justify-center items-center min-h-screen mt-8 mb-24">
-      <div className="container max-w-2xl mx-auto p-4">
-        <div className="flex flex-col items-center pb-10">
+    <main className="flex justify-center min-h-screen mt-8 mb-24">
+      <div className="flex flex-col items-center max-w-2xl mx-auto p-4">
+        <div className="flex flex-col items-center pb-12">
+          <span className="text-[14px] text-blue-400 my-2">
+            {data.category}
+          </span>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             {data.title}
           </h1>
@@ -60,7 +64,7 @@ export default function Post({ params }: PostProps) {
           </div>
         </div>
 
-        <div className="prose-sm md:prose">
+        <div className="prose-sm md:prose pb-12">
           <ReactMarkdown
             components={{
               img: ({ alt, src }) => (
@@ -78,7 +82,10 @@ export default function Post({ params }: PostProps) {
             {content}
           </ReactMarkdown>
         </div>
+        <Link href={'/posts'}>
+          <Button>← Back to Blog</Button>
+        </Link>
       </div>
-    </div>
+    </main>
   );
 }

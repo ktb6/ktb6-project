@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import ThemeSwitch from './ThemeSwitch';
 import MetaData from '@/assets/data/metadata.json';
 import MenuData from '@/assets/data/menu.json';
 

@@ -30,7 +30,7 @@ export const getPosts = () => {
 
 export function getPostsByAuthor(author: string) {
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const posts = fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
@@ -46,7 +46,9 @@ export function getPostsByAuthor(author: string) {
     };
   });
 
-  return allPostsData.filter(
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return posts.filter(
     (post) => post.author.toLowerCase() === author.toLowerCase(),
   );
 }

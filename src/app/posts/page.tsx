@@ -11,7 +11,7 @@ const PostsPage: React.FC = () => {
     <main className="flex min-h-screen flex-col items-center gap-8 px-5 max-w-screen-xl mx-auto w-full mb-24">
       <PageIntro
         title="Blog"
-        description="육두문자의 기술, 개발 조직, 문화에 대한 이야기"
+        description="팀 육두문자의 블로그는 습득한 기술, 개발 문화, 팀원들의 이야기를 들려드립니다."
       />
       <CardList cards={cards} />
     </main>

@@ -1,8 +1,8 @@
 import React from 'react';
 
 type Props = {
-  selected: boolean;
-  handleClick: () => void;
+  selected?: boolean;
+  handleClick?: () => void;
   children: React.ReactNode;
 };
 
