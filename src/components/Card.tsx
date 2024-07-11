@@ -11,6 +11,11 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ card, view }) => {
   const isListView = view === 'list';
 
+  const imageSrc =
+    card.image && card.image.trim() !== ''
+      ? card.image
+      : '/images/default_image.png';
+
   return (
     <Link href={`/posts/${card.slug}`} key={card.slug}>
       <li
@@ -18,14 +23,12 @@ const Card: React.FC<CardProps> = ({ card, view }) => {
       >
         <div
           className={`relative ${isListView ? 'w-1/3 h-auto order-last' : 'w-full order-first'}`}
-          style={{ paddingBottom: isListView ? 'unset' : '56.25%' }}
+          style={{ aspectRatio: '3 / 2' }} // 3:2 비율을 유지
         >
           <Image
-            src={card.image ?? '/images/default_image.png'}
+            src={imageSrc}
             alt={card.title}
-            layout={isListView ? 'responsive' : 'fill'}
-            width={isListView ? 780 : undefined}
-            height={isListView ? 439 : undefined} // 16:9 비율 유지
+            fill
             className="object-cover rounded-lg"
             style={{ objectFit: 'cover' }}
           />
