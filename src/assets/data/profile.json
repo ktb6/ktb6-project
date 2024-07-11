@@ -13,8 +13,8 @@
         "role": "클라우드",
         "name": "서창호",
         "nickname": "chang.seo",
-        "skills": ["Docker", "Kubernetes", "Terraform"],
-        "bio": "안녕하세요, chang입니다."
+        "skills": ["AWS", "Kubernetes", "Java", "Kafka"],
+        "bio": "안녕하세요, 항상 새로운 기술을 배우고 도전하는 것을 즐기는 클라우드 솔루션 전문가 chang입니다. AWS, Kubernetes, Java, Kafka에 대한 이해를 바탕으로 안정적이고 확장 가능한 시스템을 구축하겠습니다."
       },
       {
         "role": "클라우드",
