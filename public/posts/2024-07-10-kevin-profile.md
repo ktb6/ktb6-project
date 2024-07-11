@@ -1,8 +1,10 @@
 ---
 title: 'Kevin입니다.'
 date: '2024-07-10'
-author: 'Kevin.Lee (인공지능)'
+author: 'Kevin.Lee'
 description: 'Kevin의 소개글입니다.'
+
+category: 'Blog'
 image: ''
 ---
 

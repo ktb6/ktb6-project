@@ -1,9 +1,11 @@
 ---
 title: '팀 블로그 제작 후기'
-category: 'Blog'
 date: '2024-07-03'
 author: 'danny.jo'
 description: '우리 팀이 함께 블로그를 제작한 과정과 배운 점에 대한 후기를 공유합니다.'
+
+category: 'Blog'
+image: ''
 tags: ['육두문자', 'teamblog', 'review', 'CI/CD', 'webhook']
 ---
 

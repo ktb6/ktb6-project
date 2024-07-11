@@ -1,9 +1,10 @@
 ---
 title: '카카오테크 부트캠프 오리엔테이션 후기'
-category: 'Blog'
 date: '2024-07-01'
 author: 'danny.jo'
 description: '카카오테크 부트캠프 오리엔테이션에서의 경험과 인사이트를 공유합니다.'
+
+category: 'Blog'
 image: '/images/kakao.png'
 tags: ['kakao', 'bootcamp', 'orientation', 'pangyo', 'goorm', 'Uspace']
 ---
