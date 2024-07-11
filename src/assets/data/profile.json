@@ -6,8 +6,8 @@
         "role": "풀스택",
         "name": "신유승",
         "nickname": "youth.shin",
-        "skills": ["Java"],
-        "bio": "안녕하세요, youth입니다."
+        "skills": ["Java", "SpringBoot", "MySQL", "Redis", "AWS"],
+        "bio": "안녕하세요, 팀 육두문자 풀스택 개발자 youth입니다."
       },
       {
         "role": "클라우드",
