@@ -18,6 +18,9 @@ const config: Config = {
         DEFAULT: {
           css: {
             color: theme('colors.white'),
+            pre: {
+              maxWidth: '100%',
+            },
             h1: {
               color: theme('colors.white'),
             },
@@ -41,6 +44,7 @@ const config: Config = {
             },
             code: {
               color: theme('colors.white'),
+              maxWidth: '100%',
             },
             figcaption: {
               color: theme('colors.white'),

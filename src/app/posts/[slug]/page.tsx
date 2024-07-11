@@ -35,7 +35,7 @@ export default function Post({ params }: PostProps) {
 
   return (
     <main className="flex justify-center min-h-screen mt-8 mb-24">
-      <div className="flex flex-col items-center max-w-2xl mx-auto p-4">
+      <div className="flex flex-col items-center w-full max-w-4xl mx-auto p-6">
         <div className="flex flex-col items-center pb-12">
           <span className="text-[14px] text-blue-400 my-2">
             {data.category}
@@ -43,38 +43,35 @@ export default function Post({ params }: PostProps) {
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             {data.title}
           </h1>
-          <div className="text-gray-400 flex w-fit items-center">
+          <div className="text-gray-400 flex items-center justify-center flex-wrap">
             <Link href={`/author/${data.author}`}>
               <span>{data.author}</span>
             </Link>
             <div className="dot" />
-            <span>{formatDate(data.date)}</span>
+            <span>{formatDate(data.date)}</span>{' '}
             {data.tags && data.tags.length > 0 && (
-              <>
-                <div className="dot" />
-                <div className="flex gap-2">
-                  {data.tags.map((tag: any, index: number) => (
-                    <span key={index} className="text-slate-300">
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </>
+              <div className="flex gap-2">
+                {data.tags.map((tag: any, index: number) => (
+                  <span key={index} className="text-slate-300">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
             )}
           </div>
         </div>
 
-        <div className="prose-sm md:prose pb-24">
+        <div className="max-w-[780px] prose md:prose-lg pb-24">
           <ReactMarkdown
             components={{
               img: ({ alt, src }) => (
                 <Image
                   alt={alt || ''}
                   src={src || ''}
-                  layout="responsive"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   width={700}
                   height={475}
-                  className="mx-auto"
+                  className="mx-auto rounded-lg"
                 />
               ),
             }}
