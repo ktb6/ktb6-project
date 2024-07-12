@@ -8,6 +8,7 @@ on:
 jobs:
   trigger-sync:
     runs-on: ubuntu-latest
+    if: github.repository == 'ktb6/ktb6-teamblog'
 
     steps:
       - name: Trigger sync workflow
