@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ card, view }) => {
       : '/images/default_image.png';
 
   return (
-    <Link href={`/posts/${card.slug}`} key={card.slug}>
+    <Link href={card.link ? card.link : `/posts/${card.slug}`} key={card.slug}>
       <li
         className={`flex ${isListView ? 'flex-row max-w-[780px] mx-auto items-center' : 'flex-col'} rounded-lg items-start p-4 hover:bg-gradient-to-r from-gray-800 to-gray-700 w-full h-full`}
       >
@@ -46,8 +46,12 @@ const Card: React.FC<CardProps> = ({ card, view }) => {
           )}
           <div className="flex items-center text-slate-400">
             <p>{card.author}</p>
-            <div className="dot" />
-            {card.date && <p>{formatDate(card.date)}</p>}
+            {card.date && (
+              <>
+                <div className="dot" />
+                <p>{formatDate(card.date)}</p>
+              </>
+            )}
           </div>
         </div>
       </li>

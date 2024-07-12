@@ -11,13 +11,16 @@ type Post = {
   hide?: boolean;
 };
 
-type Card = Post & {
+type Card = {
   slug: string;
   title: string;
-  category?: string;
-  author?: string;
   date?: string;
-  description?: string;
+  author: string;
+  description: string;
+
+  link?: string;
+  category?: string;
   image?: string;
   tags?: string[];
+  hide?: boolean;
 };

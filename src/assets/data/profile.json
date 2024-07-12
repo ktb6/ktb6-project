@@ -21,7 +21,8 @@
         "name": "신유승",
         "nickname": "youth.shin",
         "skills": ["Java", "SpringBoot", "MySQL", "Redis", "AWS"],
-        "bio": "안녕하세요, 팀 육두문자 풀스택 개발자 youth입니다."
+        "bio": "안녕하세요, 팀 육두문자 풀스택 개발자 youth입니다.",
+        "image": "/images/youth.png"
       },
       {
         "role": "클라우드",
@@ -35,7 +36,8 @@
         "name": "조대현",
         "nickname": "danny.jo",
         "skills": ["Typescript", "React", "Python", "PyTorch"],
-        "bio": "안녕하세요, 저는 프론트엔드 개발자 Danny입니다. 현재 AI 코스 교육을 받고 있으며, AI를 접목해 사람들이 원하는 서비스를 만드는 것을 목표로 하고 있습니다. 열정적이고 책임감 있는 팀원들과 함께 일하는 것을 소중히 생각합니다."
+        "bio": "안녕하세요, 저는 프론트엔드 개발자 Danny입니다. 현재 AI 코스 교육을 받고 있으며, AI를 접목해 사람들이 원하는 서비스를 만드는 것을 목표로 하고 있습니다. 열정적이고 책임감 있는 팀원들과 함께 일하는 것을 소중히 생각합니다.",
+        "image": "/images/danny_profile.png"
       }
     ]
   }
