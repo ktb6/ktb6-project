@@ -21,13 +21,11 @@ jobs:
           git config --global user.name 'Danny-Jo'
           git config --global user.email 'dannyjo.world@gmail.com'
 
-      - name: Add remote repository
+      - name: Set up personal remote
         run: |
           git remote add personal https://github.com/Danny-Jo/ktb6-teamblog-mirror.git
-          git fetch personal
-          git rebase personal/develop
 
-      - name: Push changes
+      - name: Force push to personal repository
         run: |
           git push personal develop --force
         env:
