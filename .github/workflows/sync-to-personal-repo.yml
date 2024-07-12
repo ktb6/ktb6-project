@@ -23,7 +23,7 @@ jobs:
 
       - name: Add remote repository
         run: |
-          git remote add personal https://github.com/Danny-Jo/ktb6-teamblog-mirror.git
+          git remote add personal https://Danny-Jo:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Danny-Jo/ktb6-teamblog-mirror.git
           git fetch personal
           git rebase personal/main
 
