@@ -3,7 +3,7 @@ name: Trigger Sync on Personal Repo
 on:
   push:
     branches:
-      - feature/KTB-34-test-PTA-secret-key-in-action
+      - develop
 
 jobs:
   trigger-sync:

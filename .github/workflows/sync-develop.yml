@@ -1,0 +1,34 @@
+name: Sync Develop Branch
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *' # 매 시간마다 실행 (선택 사항, 원하지 않으면 제거 가능)
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    if: github.repository == 'Danny-Jo/ktb6-teamblog-mirror'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          ref: develop
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "Danny-Jo"
+          git config --global user.email "dannyjo.world@gmail.com"
+          git remote add upstream https://github.com/ktb6/ktb6-teamblog.git
+
+      - name: Fetch and merge develop branch
+        run: |
+          git fetch upstream
+          git checkout develop
+          git reset --hard upstream/develop
+
+      - name: Resolve merge conflicts
+        run: |
+          git push origin develop --force
