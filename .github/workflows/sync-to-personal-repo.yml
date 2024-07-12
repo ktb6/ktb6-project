@@ -23,7 +23,7 @@ jobs:
 
       - name: Set up personal remote
         run: |
-          git remote add personal https://github.com/Danny-Jo/ktb6-teamblog-mirror.git
+          git remote add personal https://Danny-Jo:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Danny-Jo/ktb6-teamblog-mirror.git
 
       - name: Force push to personal repository
         run: |
