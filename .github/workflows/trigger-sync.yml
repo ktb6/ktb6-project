@@ -1,0 +1,20 @@
+name: Trigger Sync on Personal Repo
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  trigger-sync:
+    runs-on: ubuntu-latest
+    if: github.repository == 'ktb6/ktb6-teamblog'
+
+    steps:
+      - name: Trigger sync workflow
+        run: |
+          curl -X POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+          https://api.github.com/repos/Danny-Jo/ktb6-teamblog-mirror/actions/workflows/sync-develop.yml/dispatches \
+          -d '{"ref":"develop"}'

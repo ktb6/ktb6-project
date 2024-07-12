@@ -18,10 +18,10 @@ export default function Giscus() {
     scriptElem.async = true;
     scriptElem.crossOrigin = 'anonymous';
 
-    scriptElem.setAttribute('data-repo', 'ktb6/ktb6-teamblog');
-    scriptElem.setAttribute('data-repo-id', 'R_kgDOMRU2Hg');
+    scriptElem.setAttribute('data-repo', 'Danny-Jo/ktb6-teamblog-mirror');
+    scriptElem.setAttribute('data-repo-id', 'R_kgDOMVP-fg');
     scriptElem.setAttribute('data-category', 'Comments');
-    scriptElem.setAttribute('data-category-id', 'DIC_kwDOMRU2Hs4CgvCG');
+    scriptElem.setAttribute('data-category-id', 'DIC_kwDOMVP-fs4CgviP');
     scriptElem.setAttribute('data-mapping', 'pathname');
     scriptElem.setAttribute('data-strict', '0');
     scriptElem.setAttribute('data-reactions-enabled', '1');
