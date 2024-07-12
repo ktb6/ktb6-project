@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ card, view }) => {
   return (
     <Link href={`/posts/${card.slug}`} key={card.slug}>
       <li
-        className={`flex ${isListView ? 'flex-row max-w-[780px] mx-auto' : 'flex-col'} rounded-lg items-start p-4 hover:bg-gradient-to-r from-slate-900 to-slate-800 w-full h-full`}
+        className={`flex ${isListView ? 'flex-row max-w-[780px] mx-auto items-center' : 'flex-col'} rounded-lg items-start p-4 hover:bg-gradient-to-r from-gray-800 to-gray-700 w-full h-full`}
       >
         <div
           className={`relative ${isListView ? 'w-1/3 h-auto order-last' : 'w-full order-first'}`}
@@ -30,6 +30,7 @@ const Card: React.FC<CardProps> = ({ card, view }) => {
             alt={card.title}
             fill
             className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{ objectFit: 'cover' }}
           />
         </div>
