@@ -3,7 +3,7 @@ name: Sync to Personal Repo
 on:
   push:
     branches:
-      - develop
+      - feature/KTB-34-test-PTA-secret-key-in-action
 
 jobs:
   sync:
