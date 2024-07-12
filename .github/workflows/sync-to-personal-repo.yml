@@ -23,12 +23,12 @@ jobs:
 
       - name: Add remote repository
         run: |
-          git remote add personal https://Danny-Jo:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Danny-Jo/ktb6-teamblog-mirror.git
+          git remote add personal https://github.com/Danny-Jo/ktb6-teamblog-mirror.git
           git fetch personal
-          git rebase personal/main
+          git rebase personal/develop
 
       - name: Push changes
-        env:
-          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           git push personal develop --force
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
