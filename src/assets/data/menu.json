@@ -1,8 +1,12 @@
 {
-  "menu": [
+  "data": [
     {
       "name": "Blog",
       "link": "/posts"
+    },
+    {
+      "name": "Review",
+      "link": "/reviews"
     },
     {
       "name": "About",

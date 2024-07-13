@@ -26,14 +26,14 @@
     ],
     "canonical_url": "http://localhost:3000",
     "robots": "index, follow",
-    "image": "/images/default_image.png"
+    "image": "/images/default-thumbnail.png"
   },
   "social_media": {
     "open_graph": {
       "title": "육두문자 - 팀 블로그 및 기술 공유 플랫폼",
       "type": "website",
       "url": "http://localhost:3000",
-      "image": "/images/default_image.png",
+      "image": "/images/default-thumbnail.png",
       "description": "우리 팀은 지속적으로 새로운 기술과 지식을 습득하고, 이를 팀원들과 공유함으로써 함께 성장하는 것을 목표로 합니다. 블로깅, 트러블 슈팅, 특강 후기를 작성하세요.",
       "site_name": "육두문자"
     }
