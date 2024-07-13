@@ -5,21 +5,22 @@ author: 'danny.jo'
 description: '팀 육두문자의 블로그를 제작하며 배운 점, 겪은 경험, 그리고 얻은 인사이트를 공유합니다.'
 
 category: 'Blog'
-image: '/images/dall.e_teamblog_thumbnail2.png'
+image: '/images/default-thumbnail-02.png'
 tags: ['육두문자', 'blog', 'webhook', 'Github Actions']
 ---
 
-![팀 블로그 제작 후기 썸네일](/images/dall.e_teamblog_thumbnail2.png)
+![팀 블로그 제작 후기 썸네일](/images/default-thumbnail-02.png)
 
 # 육두문자(KTB6) 팀 블로그 제작 후기
 
 안녕하세요, Danny입니다!
 
-썸네일을 보고 이곳에 오신 분들이라면 'KTB6 Team Blog? KTB6가 뭐지?'라는 생각을 하셨을 겁니다.
+썸네일을 보고 이곳에 오신 분들이라면 'KTB6 Team Blog? KTB6가 뭐지?'라는 생각을 하셨을 겁니다. KTB6는 "KakaoTech Bootcamp 6조"의 약자입니다. ~~(카테부 6기를 뜻하는 게 아닙니다!)~~ <br/> 육두문자라는 팀명을 영어로 번역하는 것이 쉽지 않아 영문명은 그냥 KTB6로 정했습니다.
 
-KTB6는 "KakaoTech Bootcamp 6조"의 약자입니다.(카테부 6기를 뜻하는 게 아니다!) 육두문자라는 팀명을 영어로 번역하는 것이 쉽지 않아 영문명은 그냥 KTB6로 정했습니다.
+![ChatGPT의 답변...](/images/danny/2024-07-12-01.png)
+<em style="display: flex; justify-content: center; font-size: 0.8em; color: gray;">(마음에 드는 게 없다...)</em>
 
-오늘은 팀 블로그를 첫 번째 프로젝트로 선정한 이유, 블로그를 제작하며 사용된 기술 스택, 그리고 느낀 점 등을 공유하고자 합니다.
+각설하고, 오늘은 팀 블로그 제작 후기를 공유하고자 합니다. 첫 번째 프로젝트로 팀 블로그를 선정한 이유, 사용된 기술 스택, 그리고 제작 과정에서 느낀 점 등을 다루겠습니다.
 
 ## 1. 프로젝트 선정 이유 및 목표
 
@@ -39,8 +40,8 @@ KTB6는 "KakaoTech Bootcamp 6조"의 약자입니다.(카테부 6기를 뜻하�
 
 아직 github에서 협업하는 것조차 제대로 해본 적 없는 우리 코린이들에게 이런 프로젝트는 에베레스트 산 꼭대기보다 높아보입니다. 아직 뒷동산도 마스터하지 못한 저질체력 상태에서 에베레스트를 오르라고 한다면 압박감과 스트레스로 의욕이 저하될 수밖에 없습니다.
 
-![처음에 팀활동 학습 계획을 본 나의 심정](/images/everest.png)
-_(팀 프로젝트 미션을 본 나의 심정을 표현한 그림)_
+![처음에 팀활동 학습 계획을 본 나의 심정](/images/danny/2024-07-12-02.png)
+<em style="display: flex; justify-content: center; font-size: 0.8em; color: gray;">(팀 프로젝트 미션을 본 나의 심정을 표현한 그림)</em>
 
 그래서 육두문자팀은 먼저 뒷동산부터 오르기로 했습니다. 쉬운 프로젝트를 먼저 완주해 봄으로써 협업에 대한 감을 익히고, 프로젝트를 끝까지 해냈다는 성취감과 자신감을 얻자는 계획을 세운 것이죠.
 
@@ -106,8 +107,8 @@ PR 담당자가 작업을 끝내고 리뷰를 받고 싶을 때만 메시지가 
 
 디스코드로 메시지를 보내는 작업을 하면서 Webhook이라는 새로운 기술도 알게 되었고, 사용하는 법도 어느 정도 익히게 되었습니다. 웹훅(Webhook)은 이벤트가 발생할 때 다른 애플리케이션에 HTTP 요청을 통해 실시간으로 데이터를 전송하는 방법을 의미합니다. 이는 애플리케이션 간의 통신을 자동화하고 실시간으로 업데이트를 받을 수 있도록 해줍니다.
 
-![디코 웹훅](/images/discord-webhook.png)
-_(우리 팀 서버의 작고 귀여운 웹훅 친구들)_
+![디코 웹훅](/images/danny/2024-07-12-03.png)
+<em style="display: flex; justify-content: center; font-size: 0.8em; color: gray;">(우리 팀 서버의 작고 귀여운 웹훅 친구들)</em>
 
 ## 7. 팀워크 및 협업
 

@@ -32,7 +32,7 @@ const CardList: React.FC<CardListProps> = ({
           >
             <>
               <img
-                src="/images/icon_grid.svg"
+                src="/images/icons/grid.svg"
                 alt="Grid View"
                 className="w-5 h-5 mr-2"
               />
@@ -45,7 +45,7 @@ const CardList: React.FC<CardListProps> = ({
           >
             <>
               <img
-                src="/images/icon_list.svg"
+                src="/images/icons/list.svg"
                 alt="Grid View"
                 className="w-5 h-5 mr-2"
               />

@@ -32,6 +32,12 @@ const config: Config = {
             h5: {
               color: '#F0F0F0', // 제목 색상
             },
+            strong: {
+              color: '#F0F0F0',
+            },
+            code: {
+              color: '#F0F0F0',
+            },
             a: {
               color: theme('colors.blue.500'),
               '&:hover': {

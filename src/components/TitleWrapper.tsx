@@ -2,16 +2,22 @@ import React from 'react';
 
 type Props = {
   title: string;
-  children: React.ReactNode;
+  description?: string;
+  children?: React.ReactNode;
 };
 
-export const TitleWrapper = ({ title, children }: Props) => {
+export const TitleWrapper = ({ title, description, children }: Props) => {
   return (
-    <div className="container mx-auto p-6 flex flex-col items-center">
+    <section className="container mx-auto p-6 flex flex-col items-center">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center">
         {title}
       </h1>
-      <div>{children}</div>
-    </div>
+      {description && (
+        <span className="text-md sm:text-lg lg:text-xl text-gray-400">
+          {description}
+        </span>
+      )}
+      {children && <div>{children}</div>}
+    </section>
   );
 };

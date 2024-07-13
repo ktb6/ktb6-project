@@ -1,6 +1,7 @@
 import CardList from '@/components/CardList';
 import PageIntro from '@/components/PageIntro';
 import ProfileData from '@/assets/data/profile.json';
+import MainContainer from '@/components/MainContainer';
 
 const AuthorPage = () => {
   const profileData = ProfileData;
@@ -15,13 +16,13 @@ const AuthorPage = () => {
   }));
 
   return (
-    <main className="flex min-h-screen flex-col items-center gap-8 px-5 max-w-screen-xl mx-auto w-full mb-24">
+    <MainContainer>
       <PageIntro
         title="Author"
         description="육두문자의 이야기를 만들어 가는 사람들"
       />
       <CardList cards={cards} />
-    </main>
+    </MainContainer>
   );
 };
 

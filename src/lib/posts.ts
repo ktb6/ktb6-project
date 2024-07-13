@@ -4,6 +4,14 @@ import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'public/posts');
 
+export const getPost = (slug: string) => {
+  const postPath = path.join(process.cwd(), 'public/posts', `${slug}.md`);
+  const fileContents = fs.readFileSync(postPath, 'utf8');
+  const { data, content } = matter(fileContents);
+
+  return { data, content };
+};
+
 export const getPosts = () => {
   const filenames = fs.readdirSync(postsDirectory);
 

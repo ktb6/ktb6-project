@@ -1,4 +1,5 @@
 import CardList from '@/components/CardList';
+import MainContainer from '@/components/MainContainer';
 import PageIntro from '@/components/PageIntro';
 import { getPostsByAuthor } from '@/lib/posts';
 import { transformPostsToCards } from '@/utils/posts';
@@ -11,10 +12,10 @@ const AuthorPage = ({ params }: { params: { slug: string } }) => {
   const memberData = findMemberByNickname(slug);
 
   return (
-    <main className="flex min-h-screen flex-col items-center gap-8 px-5 max-w-screen-xl mx-auto w-full">
+    <MainContainer>
       <PageIntro title={slug} description={memberData?.bio} />
       <CardList cards={cards} />
-    </main>
+    </MainContainer>
   );
 };
 
