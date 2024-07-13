@@ -14,12 +14,12 @@ const Card: React.FC<CardProps> = ({ card, view }) => {
   const imageSrc =
     card.image && card.image.trim() !== ''
       ? card.image
-      : '/images/default_image.png';
+      : '/images/default-thumbnail.png';
 
   return (
     <Link href={card.link ? card.link : `/posts/${card.slug}`} key={card.slug}>
       <li
-        className={`flex ${isListView ? 'flex-row max-w-[780px] mx-auto items-center' : 'flex-col'} rounded-lg items-start p-4 hover:bg-gradient-to-r from-gray-800 to-gray-700 w-full h-full`}
+        className={`flex ${isListView ? 'flex-row max-w-[780px] mx-auto items-center' : 'flex-col'} rounded-lg items-start  p-2 sm:p-4 hover:bg-gradient-to-r from-zinc-800 to-zinc-700 w-full h-full`}
       >
         <div
           className={`relative ${isListView ? 'w-1/3 h-auto order-last' : 'w-full order-first'}`}
