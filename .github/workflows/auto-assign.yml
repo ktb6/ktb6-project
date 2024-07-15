@@ -10,9 +10,8 @@ jobs:
 
     steps:
       - name: Assign PR author
-        uses: kentaro-m/auto-assign-action@v2.1.0
+        uses: kentaro-m/auto-assign-action@v2.0.0
         with:
-          addAssignees: true
-          addReviewers: false
+          configuration-path: '.github/auto_assign.yml'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
