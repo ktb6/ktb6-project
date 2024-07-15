@@ -6,7 +6,8 @@ description: '팀 육두문자의 블로그를 제작하며 배운 점, 겪은 �
 
 category: 'Blog'
 image: '/images/default-thumbnail-03.png'
-tags: ['육두문자', 'blog', 'webhook', 'Github Actions']
+tags: []
+hide: true
 ---
 
 ## 코드 리뷰 회의록

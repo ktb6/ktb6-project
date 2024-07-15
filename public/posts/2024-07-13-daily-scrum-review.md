@@ -6,7 +6,8 @@ description: '팀 육두문자의 블로그를 제작하며 배운 점, 겪은 �
 
 category: 'Blog'
 image: '/images/default-thumbnail-02.png'
-tags: ['육두문자', 'blog', 'webhook', 'Github Actions']
+tags: []
+hide: true
 ---
 
 ## 데일리 스크럼 회의록
@@ -73,5 +74,10 @@ tags: ['육두문자', 'blog', 'webhook', 'Github Actions']
 
 - [추가 메모 1]
 - [추가 메모 2]
+
+## 장애물에 대한 기준
+* 설정한 기한 내에 마무리 하지 못한 일
+* 진행 중이지만 설정한 기한 내에 마무리 못할 것 같은 일
+* 혼자 해결하기 버거운 일
 
 ---
