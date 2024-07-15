@@ -15,7 +15,7 @@ type Props = {
 };
 const PostDetail = ({ data, content }: Props) => {
   return (
-    <div className="flex flex-col items-center w-full max-w-[820px] mx-auto p-6">
+    <div className="flex flex-col items-center w-full max-w-[820px] mx-auto py-6 px-2">
       <div className="flex flex-col items-center pb-8">
         <span className="text-[14px] text-blue-400 my-2">{data.category}</span>
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
@@ -28,7 +28,7 @@ const PostDetail = ({ data, content }: Props) => {
           <div className="dot" />
           <span>{formatDate(data.date)}</span>
           {data.tags && data.tags.length > 0 && (
-            <div className="flex gap-2 ml-2">
+            <div className="flex gap-2 ml-2 flex-wrap">
               {data.tags.map((tag: any, index: number) => (
                 <span key={index} className="text-slate-300">
                   #{tag}

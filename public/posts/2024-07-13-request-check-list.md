@@ -5,8 +5,8 @@ author: 'danny.jo'
 description: '팀 육두문자의 블로그를 제작하며 배운 점, 겪은 경험, 그리고 얻은 인사이트를 공유합니다.'
 
 category: 'Blog'
-image: '/images/default-thumbnail-02.png'
-tags: ['육두문자', 'blog', 'webhook', 'Github Actions']
+image: '/images/default-thumbnail-01.png'
+tags: []
 hide: true
 ---
 
