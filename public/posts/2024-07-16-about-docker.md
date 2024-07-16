@@ -7,10 +7,7 @@ description: 'Docker 소개 글'
 category: 'Blog'
 image: '/images/chang/2024-07-16-01.png'
 tags: ['Cloud']
-hide: 'boolean type (옵션)'
 ---
-
-![Docker 이미지]('/images/chang/2024-07-16-01.png')
 
 # Docker
 
