@@ -1,7 +1,7 @@
 ---
 title: '팀 블로그 제작 후기'
 date: '2024-07-10'
-author: 'chang.Seo'
+author: 'Chang.Seo'
 description: '컴공과 교수가 추천해준 단 하나의 코딩테스트 언어?!'
 
 category: 'Blog'
