@@ -13,7 +13,7 @@ export const TitleWrapper = ({ title, description, children }: Props) => {
         {title}
       </h1>
       {description && (
-        <span className="text-md sm:text-lg lg:text-xl text-gray-400">
+        <span className="text-md sm:text-lg lg:text-xl text-light-text-4 dark:text-gray-400">
           {description}
         </span>
       )}

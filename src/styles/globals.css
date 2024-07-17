@@ -18,7 +18,7 @@
   }
 
   .dot {
-    background-color: #9ca3af;
+    background-color: #4B5563;
     border-radius: 50%;
     height: 4px;
     width: 4px;
@@ -28,41 +28,82 @@
   .first-screen-gradient {
     background: linear-gradient(
       180deg,
-      rgba(110, 110, 110, 1) 0%,
-      rgba(80, 80, 80, 1) 10%,
-      rgba(25, 25, 25, 1) 90%,
-      rgba(25, 25, 25, 1) 100%
+      rgba(145, 145, 145, 1) 100%,
+      rgba(175, 175, 175, 1) 90%,
+      rgba(230, 230, 230, 1) 10%,
+      rgba(230, 230, 230, 1) 0%
     );
   }
 
   .mask-gradient {
-    mask-image: linear-gradient(transparent, black);
+    mask-image: linear-gradient(transparent, white);
   }
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: 250, 0, 0;
+  --background-start-rgb: 230, 0, 0;
   --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
+  
   :root {
     --foreground-rgb: 240, 240, 240;
     --background-start-rgb: 25, 25, 25;
     --background-end-rgb: 25, 25, 25;
   }
+  
+  @layer utilities {
+    .hover-3d {
+      transition: transform 0.3s ease-in-out;
+      transform-style: preserve-3d;
+      transform-origin: center;
+    }
+  
+    .hover-3d:hover {
+      transform: perspective(1000px) rotateY(15deg) scale(1.02);
+    }
+  
+    .text-balance {
+      text-wrap: balance;
+    }
+  
+    .dot {
+      background-color: #9ca3af;
+      border-radius: 50%;
+      height: 4px;
+      width: 4px;
+      margin: 8px 10px;
+    }
+  
+    .first-screen-gradient {
+      background: linear-gradient(
+        180deg,
+        rgba(110, 110, 110, 1) 0%,
+        rgba(80, 80, 80, 1) 10%,
+        rgba(25, 25, 25, 1) 90%,
+        rgba(25, 25, 25, 1) 100%
+      );
+    }
+  
+    .mask-gradient {
+      mask-image: linear-gradient(transparent, black);
+    }
+  }
 }
-
+/*
 body {
-  /* color: rgb(var(--foreground-rgb));
+   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb)); */
+    rgb(var(--background-start-rgb)); 
 
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
 }
+
+*/
