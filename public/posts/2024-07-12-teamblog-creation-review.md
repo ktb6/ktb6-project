@@ -1,7 +1,7 @@
 ---
 title: '육두문자 팀 블로그 제작 후기'
 date: '2024-07-12'
-author: 'danny.jo'
+author: 'Danny.Jo'
 description: '팀 육두문자의 블로그를 제작하며 배운 점, 겪은 경험, 그리고 얻은 인사이트를 공유합니다.'
 
 category: 'Blog'

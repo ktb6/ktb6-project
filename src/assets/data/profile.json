@@ -4,32 +4,32 @@
     "members": [
       {
         "role": "클라우드",
-        "nickname": "ari.byun",
+        "nickname": "Ari.Byun",
         "skills": ["AWS", "React", "Express"],
-        "bio": "안녕하세요, ari입니다."
+        "bio": "안녕하세요, Ari입니다."
       },
       {
         "role": "인공지능",
-        "nickname": "kevin.lee",
+        "nickname": "Kevin.Lee",
         "skills": ["Python", "Machine Learning", "NLP"],
-        "bio": "네, kevin입니다. 잘 부탁드립니다."
+        "bio": "네, Kevin입니다. 잘 부탁드립니다."
       },
       {
         "role": "풀스택",
-        "nickname": "youth.shin",
+        "nickname": "Youth.Shin",
         "skills": ["Java", "SpringBoot", "MySQL", "Redis", "AWS"],
-        "bio": "안녕하세요, 팀 육두문자 풀스택 개발자 youth입니다.",
+        "bio": "안녕하세요, 팀 육두문자 풀스택 개발자 Youth입니다.",
         "image": "/images/profile/youth.png"
       },
       {
         "role": "클라우드",
-        "nickname": "chang.seo",
+        "nickname": "Chang.Seo",
         "skills": ["AWS", "Kubernetes", "Java", "Kafka"],
-        "bio": "안녕하세요, 항상 새로운 기술을 배우고 도전하는 것을 즐기는 클라우드 솔루션 전문가 chang입니다. AWS, Kubernetes, Java, Kafka에 대한 이해를 바탕으로 안정적이고 확장 가능한 시스템을 구축하겠습니다."
+        "bio": "안녕하세요, 항상 새로운 기술을 배우고 도전하는 것을 즐기는 클라우드 솔루션 전문가 Chang입니다. AWS, Kubernetes, Java, Kafka에 대한 이해를 바탕으로 안정적이고 확장 가능한 시스템을 구축하겠습니다."
       },
       {
         "role": "인공지능",
-        "nickname": "danny.jo",
+        "nickname": "Danny.Jo",
         "skills": ["Typescript", "React", "Python", "PyTorch"],
         "bio": "안녕하세요, 저는 프론트엔드 개발자 Danny입니다. 현재 AI 코스 교육을 받고 있으며, AI를 접목해 사람들이 원하는 서비스를 만드는 것을 목표로 하고 있습니다. 열정적이고 책임감 있는 팀원들과 함께 일하는 것을 소중히 생각합니다.",
         "image": "/images/profile/danny.png"
