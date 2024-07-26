@@ -18,13 +18,16 @@ export const renderDescription = (description: DescriptionItem[]) => {
   return description.map((item) => {
     if (item.type === 'p') {
       return (
-        <p key={item.id} className="text-gray-300 mb-4">
+        <p key={item.id} className="text-light-text dark:text-dark-text-1 mb-4">
           {item.text}
         </p>
       );
     } else if (item.type === 'ul') {
       return (
-        <ul key={item.id} className="list-disc list-inside text-gray-300 mb-4">
+        <ul
+          key={item.id}
+          className="list-disc list-inside text-light-text-3 dark:text-dark-text-3 mb-4"
+        >
           {(item.text as string[]).map((text, index) => (
             <li key={`${item.id}-li-${index}`}>{text}</li>
           ))}
@@ -37,7 +40,7 @@ export const renderDescription = (description: DescriptionItem[]) => {
 
 export const AboutSectionCard = ({ sections }: CardProps) => {
   return (
-    <div className="bg-gradient-to-r from-zinc-700 to-zinc-600 shadow-lg rounded-lg p-6 flex flex-col gap-2 max-w-[740px]">
+    <div className="bg-gradient-to-r from-zinc-300 to-zinc-400 dark:from-zinc-700 dark:to-zinc-600 shadow-lg rounded-lg p-6 flex flex-col gap-2 max-w-[740px]">
       {sections.map((section) => (
         <div key={`${section.id}-card`}>
           <h3 className="text-xl sm:text-2xl font-semibold mb-2">
