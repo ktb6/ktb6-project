@@ -21,18 +21,18 @@ export const ProfileCardList = ({ profile }: ListProps) => {
 export const ProfileCard = ({ member }: Props) => {
   return (
     <Link href={`/author/${member.nickname}`}>
-      <div className="bg-gradient-to-r from-zinc-700 to-zinc-600 shadow-lg rounded-lg p-6 hover-3d">
+      <div className="bg-gradient-to-r from-slate-300 to-slate-400 dark:from-zinc-700 dark:to-zinc-600 shadow-lg rounded-lg p-6 hover-3d">
         <h2 className="text-xl sm:text-2xl font-semibold mb-2">
           {member.role} 개발자
         </h2>
-        <p className="text-gray-300 mb-1">
+        <p className="dark:text-gray-300 mb-1">
           <span className="font-bold">이름:</span> {member.nickname}
         </p>
-        <p className="text-gray-300 mb-1">
+        <p className="dark:text-gray-300 mb-1">
           <span className="font-bold">주요 기술:</span>{' '}
           {member.skills.join(', ')}
         </p>
-        <p className="text-gray-300">
+        <p className="dark:text-gray-300">
           <span className="font-bold">소개:</span> {member.bio}
         </p>
       </div>

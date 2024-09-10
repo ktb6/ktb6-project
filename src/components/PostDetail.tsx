@@ -21,7 +21,7 @@ const PostDetail = ({ data, content }: Props) => {
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
           {data.title}
         </h1>
-        <div className="text-gray-400 flex items-center justify-center flex-wrap">
+        <div className="text-slate-700 dark:text-gray-400 flex items-center justify-center flex-wrap">
           <Link href={`/author/${data.author}`}>
             <span>{data.author}</span>
           </Link>
@@ -30,7 +30,10 @@ const PostDetail = ({ data, content }: Props) => {
           {data.tags && data.tags.length > 0 && (
             <div className="flex gap-2 ml-2 flex-wrap">
               {data.tags.map((tag: any, index: number) => (
-                <span key={index} className="text-slate-300">
+                <span
+                  key={index}
+                  className="text-slate-500 dark:text-slate-300"
+                >
                   #{tag}
                 </span>
               ))}
@@ -40,7 +43,7 @@ const PostDetail = ({ data, content }: Props) => {
       </div>
 
       <div className="flex flex-col w-full max-w-[780px] items-center justify-center gap-6 md:gap-14 pb-24">
-        <div className="w-full max-w-[780px] prose md:prose-lg text-[#F0F0F0]">
+        <div className="w-full max-w-[780px] prose md:prose-lg text-slate-700 dark:text-[#F0F0F0] custom-typography">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}

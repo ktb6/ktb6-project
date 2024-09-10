@@ -25,13 +25,13 @@
     margin: 8px 10px;
   }
 
-  .first-screen-gradient {
+  .screen-gradient {
     background: linear-gradient(
       180deg,
-      rgba(110, 110, 110, 1) 0%,
-      rgba(80, 80, 80, 1) 10%,
-      rgba(25, 25, 25, 1) 90%,
-      rgba(25, 25, 25, 1) 100%
+      rgba(150, 155, 157, 1) 0%,
+      rgba(150, 155, 157, 1) 10%,
+      rgba(200, 205, 207, 1) 90%,
+      rgba(214, 219, 220, 1) 100%
     );
   }
 
@@ -52,6 +52,16 @@
     --background-start-rgb: 25, 25, 25;
     --background-end-rgb: 25, 25, 25;
   }
+
+  .screen-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(110, 110, 110, 1) 0%,
+      rgba(80, 80, 80, 1) 10%,
+      rgba(25, 25, 25, 1) 90%,
+      rgba(25, 25, 25, 1) 100%
+    );
+  }
 }
 
 body {
@@ -65,4 +75,50 @@ body {
 
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  /* 라이트 모드 스타일 */
+  .custom-typography {
+    @apply prose; /* Tailwind Typography 기본 스타일 적용 */
+  }
+
+  .custom-typography h1,
+  .custom-typography h2,
+  .custom-typography h3,
+  .custom-typography h4,
+  .custom-typography h5,
+  .custom-typography strong,
+  .custom-typography code {
+    color: #000000; /* 라이트 모드에서 텍스트를 검정색으로 설정 */
+  }
+
+  .custom-typography a {
+    color: theme('colors.blue.500'); /* 라이트 모드에서 링크 색상 */
+  }
+
+  .custom-typography a:hover {
+    color: theme('colors.blue.700'); /* 라이트 모드에서 링크 hover 색상 */
+  }
+
+  /* 다크 모드 스타일 */
+  @media (prefers-color-scheme: dark) {
+    .custom-typography h1,
+    .custom-typography h2,
+    .custom-typography h3,
+    .custom-typography h4,
+    .custom-typography h5,
+    .custom-typography strong,
+    .custom-typography code {
+      color: #ffffff; /* 다크 모드에서 텍스트를 흰색으로 설정 */
+    }
+
+    .custom-typography a {
+      color: theme('colors.blue.300'); /* 다크 모드에서 링크 색상 */
+    }
+
+    .custom-typography a:hover {
+      color: theme('colors.blue.500'); /* 다크 모드에서 링크 hover 색상 */
+    }
+  }
 }

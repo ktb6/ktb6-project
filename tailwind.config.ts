@@ -6,7 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
+  darkMode: 'class', // class 기반 다크 모드 설정
   theme: {
     extend: {
       backgroundImage: {
@@ -18,30 +18,61 @@ const config: Config = {
         DEFAULT: {
           css: {
             h1: {
-              color: '#F0F0F0', // 제목 색상
+              color: '#000000', // 라이트 모드에서 제목 색상 (검정)
             },
             h2: {
-              color: '#F0F0F0', // 제목 색상
+              color: '#000000',
             },
             h3: {
-              color: '#F0F0F0', // 제목 색상
+              color: '#000000',
             },
             h4: {
-              color: '#F0F0F0', // 제목 색상
+              color: '#000000',
             },
             h5: {
-              color: '#F0F0F0', // 제목 색상
+              color: '#000000',
             },
             strong: {
-              color: '#F0F0F0',
+              color: '#000000',
             },
             code: {
-              color: '#F0F0F0',
+              color: '#000000',
             },
             a: {
               color: theme('colors.blue.500'),
               '&:hover': {
                 color: theme('colors.blue.700'),
+              },
+            },
+          },
+        },
+        dark: {
+          css: {
+            h1: {
+              color: '#FFFFFF', // 다크 모드에서 제목 색상 (흰색)
+            },
+            h2: {
+              color: '#FFFFFF',
+            },
+            h3: {
+              color: '#FFFFFF',
+            },
+            h4: {
+              color: '#FFFFFF',
+            },
+            h5: {
+              color: '#FFFFFF',
+            },
+            strong: {
+              color: '#FFFFFF',
+            },
+            code: {
+              color: '#FFFFFF',
+            },
+            a: {
+              color: theme('colors.blue.300'), // 다크 모드에서 링크 색상
+              '&:hover': {
+                color: theme('colors.blue.500'),
               },
             },
           },
