@@ -1,4 +1,4 @@
-# KTB-14
+# KTB-[issue key number]
 
 ## 🎯 목적
 * 

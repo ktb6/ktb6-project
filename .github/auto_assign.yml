@@ -1,0 +1,5 @@
+# Configuration for the auto-assign action
+addReviewers: false
+addAssignees: author
+reviewers: []
+assignees: []
